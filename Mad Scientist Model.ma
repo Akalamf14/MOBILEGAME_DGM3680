@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: Mad Scientist Model.ma
-//Last modified: Mon, Jan 17, 2022 02:17:51 PM
+//Last modified: Wed, Jan 26, 2022 08:18:48 AM
 //Codeset: 1252
 file -rdi 1 -ns "Takoto_Model" -rfn "Takoto_ModelRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/akala/Documents/akala.UVU Work/DGM/JUNIOR YEAR/DGM 3660/Takoto_Model.ma";
@@ -21,12 +21,12 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202108111415-612a77abf4";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19043)";
-fileInfo "UUID" "2CCFA2E9-4633-D851-6AB1-D8979A566B5C";
+fileInfo "UUID" "AFFC4B36-4BF3-E31C-9A96-04949AF6EE51";
 createNode transform -s -n "persp";
 	rename -uid "DCD867D4-4BFD-CEF4-F95F-ECBE4ED1D25B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.9464127203475345 6.6971945758624321 19.574728166362863 ;
-	setAttr ".r" -type "double3" -6.3383527201418097 -1793.8000000010989 9.9977103475700753e-17 ;
+	setAttr ".t" -type "double3" 4.4368502603261781 9.0609861822784712 18.737433452179694 ;
+	setAttr ".r" -type "double3" -13.538352720598033 -1786.1999999998091 -4.0938657342037073e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E416F92C-4D42-102A-EFA4-0CA8780D0B02";
 	setAttr -k off ".v" no;
@@ -34,7 +34,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
-	setAttr ".coi" 19.762613157407031;
+	setAttr ".coi" 21.515182957166495;
 	setAttr ".ow" 0.1;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -97,22 +97,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "pPlane1";
-	rename -uid "1C05A6E2-4C48-C2FC-F5EB-B7BB09A76F36";
-	setAttr ".t" -type "double3" 0 5.651757106379832 0.19678285826426409 ;
-	setAttr ".r" -type "double3" 90 0 0 ;
-	setAttr ".s" -type "double3" 0.52904814906200237 1 1 ;
-createNode mesh -n "pPlaneShape1" -p "pPlane1";
-	rename -uid "CFD0277A-4CB2-C34E-E7A5-18BDDC0755ED";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pSphere1";
 	rename -uid "3FD04D77-4DA2-F430-5957-ECAE956AFF63";
 	setAttr ".t" -type "double3" 0 7.7204244948448446 -0.32781388495351743 ;
@@ -128,7 +112,7 @@ createNode mesh -n "pSphereShape1" -p "pSphere1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 215 ".pt";
+	setAttr -s 191 ".pt";
 	setAttr ".pt[0]" -type "float3" 0 -0.0091893896 0.018561222 ;
 	setAttr ".pt[1]" -type "float3" 0 -0.013542426 0.033861708 ;
 	setAttr ".pt[2]" -type "float3" 0 -0.016504187 0.044725675 ;
@@ -516,8 +500,41 @@ createNode mesh -n "pCylinderShape2" -p "pCylinder2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder3";
+	rename -uid "8E3D47A3-4691-1B5F-3ECB-3FA5428B8194";
+	setAttr ".t" -type "double3" 0 5.2553164771458443 0 ;
+	setAttr ".s" -type "double3" 0.3642281608083987 0.9687636523011095 0.33259688981809282 ;
+createNode mesh -n "pCylinderShape3" -p "pCylinder3";
+	rename -uid "F2D2C8B3-4109-FE8D-1AAF-F6824FC8FE0C";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999998509883881 0.84374997019767761 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 41 ".pt[0:40]" -type "float3"  1.0426482 -0.2315736 -0.22846769 
+		0.88692999 -0.2315736 -0.43457165 0.64439219 -0.2315736 -0.59813643 0.33877727 -0.2315736 
+		-0.70315123 1.3980221e-07 -0.2315736 -0.73933703 -0.33877671 -0.2315736 -0.70315123 
+		-0.64439207 -0.2315736 -0.59813637 -0.88692963 -0.2315736 -0.43457124 -1.042648 -0.2315736 
+		-0.22846767 -1.0963051 -0.2315736 1.1281382e-07 -1.042648 -0.2315736 0.22846779 -0.8869288 
+		-0.2315736 0.43457168 -0.64439154 -0.2315736 0.59813643 -0.33877671 -0.2315736 0.70315123 
+		1.0712971e-07 -0.2315736 0.73933703 0.33877677 -0.2315736 0.70315123 0.64439207 -0.2315736 
+		0.59813637 0.88692963 -0.2315736 0.43457165 1.042648 -0.2315736 0.22846776 1.0963051 
+		-0.2315736 1.1281382e-07 -0.25374445 0.040360939 0.0037506609 -0.21584789 0.069793805 
+		0.017260298 -0.15682273 0.093151852 0.027981535 -0.082446568 0.10814861 0.034865059 
+		-3.0533119e-08 0.11331616 0.037236929 0.082446449 0.10814863 0.034865052 0.15682268 
+		0.093151852 0.027981602 0.21584783 0.069793776 0.017260261 0.2537443 0.040360928 
+		0.0037506486 0.26680285 0.0077343811 -0.01122488 0.2537443 -0.002444397 -0.2285073 
+		0.21584783 -0.026392024 -0.29145125 0.15682261 -0.040934049 -0.38162711 0.082446501 
+		-0.047366623 -0.46569347 -2.2581803e-08 -0.048937283 -0.50047773 -0.082446486 -0.047366634 
+		-0.46569344 -0.15682268 -0.040934019 -0.38162705 -0.21584783 -0.026392035 -0.29145128 
+		-0.2537443 -0.0024443958 -0.22850731 -0.26680285 0.0077343811 -0.01122488 0 1.9073486e-08 
+		-0.059947696;
 createNode fosterParent -n "Takoto_ModelRNfosterParent1";
-	rename -uid "FB8F56A3-4161-423A-5D1B-42A88324EF15";
+	rename -uid "238D34BD-4D65-425A-C41D-2FB4289A7633";
 createNode mesh -n "Takoto_GeoShape1" -p "Takoto_ModelRNfosterParent1";
 	rename -uid "9E89605C-4C61-FE79-96CA-04B1F3E695F1";
 	setAttr -k off ".v";
@@ -11996,27 +12013,27 @@ createNode mesh -n "Takoto_GeoShape1" -p "Takoto_ModelRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "24B380D4-4993-73CF-F412-0A89CCCEDB9B";
+	rename -uid "D878AA14-4A6A-BD3B-87E5-1E9F6AA47FFE";
 	setAttr -s 14 ".lnk";
 	setAttr -s 14 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "77F653DF-454E-D157-C76E-23B3C2A0892B";
+	rename -uid "8D3F4858-446A-35BC-EFB3-CEBEF40D1B2C";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6050130C-40AD-DF2A-0E7B-45A40AFB4DDB";
+	rename -uid "2499AFD6-48DD-849E-564E-8493FA395F72";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0440D07F-47BC-5C2D-F0D6-1DA8112F753F";
-	setAttr ".dli[1]"  1;
+	rename -uid "299A5EC1-433C-EB39-9D74-95902FCB8A51";
+	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "748B9035-41A3-5A10-523B-419496169E35";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "737C745E-4529-DD50-AB2A-4CAA6DD469C4";
+	rename -uid "0B389928-4434-CFAE-5F19-26BEE3804F52";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BBD6E533-407A-679C-DDBE-BDB77A33EFA8";
 	setAttr ".g" yes;
 createNode reference -n "Takoto_ModelRN";
 	rename -uid "3FD91327-4302-DB6E-C8E9-00868369631B";
-	setAttr -s 113 ".phl";
+	setAttr -s 119 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -12130,1220 +12147,78 @@ createNode reference -n "Takoto_ModelRN";
 	setAttr ".phl[111]" 0;
 	setAttr ".phl[112]" 0;
 	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
+	setAttr ".phl[117]" 0;
+	setAttr ".phl[118]" 0;
+	setAttr ".phl[119]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Takoto_ModelRN"
 		"Takoto_ModelRN" 0
-		"Takoto_ModelRN" 1029
+		"Takoto_ModelRN" 214
 		0 "|Takoto_ModelRNfosterParent1|Takoto_GeoShape1" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo" 
 		"-s -r "
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo" "scale" 
 		" -type \"double3\" 1 1 1"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"instObjGroups.objectGroups" " -s 20"
+		"instObjGroups.objectGroups" " -s 22"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"uvPivot" " -type \"double2\" 0.56839701533317566 -0.34081549942493439"
+		"uvPivot" " -type \"double2\" 0.78331750631332397 -0.8777649998664856"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts" " -s 885"
+		"pnts" " -s 870"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[0]" " -type \"float3\" 0 0 0"
+		"pt[0:293]" (" -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "
+		+ "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		)
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[2]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[3]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[4]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[5]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[6]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[7]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[8]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[9]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[10]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[11]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[12]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[13]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[14]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[15]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[16]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[17]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[18]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[19]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[20]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[21]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[22]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[23]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[24]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[25]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[26]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[27]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[28]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[29]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[30]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[31]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[32]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[33]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[34]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[35]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[36]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[37]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[38]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[39]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[40]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[41]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[42]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[43]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[44]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[45]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[46]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[47]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[48]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[49]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[50]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[51]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[52]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[53]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[54]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[55]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[56]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[57]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[58]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[59]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[60]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[61]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[62]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[63]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[64]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[65]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[66]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[67]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[68]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[69]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[70]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[71]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[72]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[73]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[74]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[75]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[76]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[77]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[78]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[79]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[80]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[81]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[82]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[83]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[84]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[85]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[86]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[87]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[88]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[89]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[90]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[91]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[92]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[93]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[94]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[95]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[96]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[97]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[98]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[99]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[100]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[101]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[102]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[103]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[104]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[105]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[106]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[107]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[108]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[109]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[110]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[111]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[112]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[113]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[114]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[115]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[116]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[117]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[118]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[119]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[120]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[121]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[122]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[123]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[124]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[125]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[126]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[127]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[128]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[129]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[130]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[131]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[132]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[133]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[134]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[135]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[136]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[137]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[138]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[139]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[140]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[141]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[142]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[143]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[144]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[145]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[146]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[147]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[148]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[149]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[150]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[151]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[152]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[153]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[154]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[155]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[156]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[157]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[158]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[159]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[160]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[161]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[162]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[163]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[164]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[165]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[166]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[167]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[168]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[169]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[170]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[171]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[172]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[173]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[174]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[175]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[176]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[177]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[178]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[179]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[180]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[181]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[182]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[183]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[184]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[185]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[186]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[187]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[188]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[189]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[190]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[191]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[192]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[193]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[194]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[195]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[196]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[197]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[198]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[199]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[200]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[201]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[202]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[203]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[204]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[205]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[206]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[207]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[208]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[209]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[210]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[211]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[212]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[213]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[214]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[215]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[216]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[217]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[218]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[219]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[220]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[221]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[222]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[223]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[224]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[225]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[226]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[227]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[228]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[229]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[230]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[231]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[232]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[233]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[234]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[235]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[236]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[237]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[238]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[239]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[240]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[241]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[242]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[243]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[244]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[245]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[246]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[247]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[248]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[249]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[250]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[251]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[252]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[253]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[254]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[255]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[256]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[257]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[258]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[259]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[260]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[261]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[262]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[263]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[264]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[265]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[266]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[267]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[268]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[269]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[270]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[271]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[272]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[273]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[274]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[275]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[276]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[277]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[278]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[279]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[280]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[281]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[282]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[283]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[284]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[285]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[286]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[287]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[288]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[289]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[290]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[291]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[292]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[293]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[296]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[297]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[298]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[299]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[300]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[301]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[302]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[303]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[304]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[305]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[306]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[307]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[308]" " -type \"float3\" 0 0 0"
+		"pt[296:308]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[310]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[316]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[360]" " -type \"float3\" 0 0 0"
+		"pt[360:361]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[361]" " -type \"float3\" 0 0 0"
+		"pt[363:371]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[363]" " -type \"float3\" 0 0 0"
+		"pt[394:398]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[364]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[365]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[366]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[367]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[368]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[369]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[370]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[371]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[394]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[395]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[396]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[397]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[398]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[404]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[405]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[406]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[407]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[408]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[409]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[410]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[411]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[412]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[413]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[414]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[415]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[416]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[417]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[418]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[419]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[420]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[421]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[422]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[423]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[424]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[425]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[426]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[427]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[428]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[429]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[430]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[431]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[432]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[433]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[434]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[435]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[436]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[437]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[438]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[439]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[440]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[441]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[442]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[443]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[444]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[445]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[446]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[447]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[448]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[449]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[450]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[451]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[452]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[453]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[454]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[455]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[456]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[457]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[458]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[459]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[460]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[461]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[462]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[463]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[464]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[465]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[466]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[467]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[468]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[469]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[470]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[471]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[472]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[473]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[474]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[475]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[476]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[477]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[478]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[479]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[480]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[481]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[482]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[483]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[484]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[485]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[486]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[487]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[488]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[489]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[490]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[491]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[492]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[493]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[494]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[495]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[496]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[497]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[498]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[499]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[500]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[501]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[502]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[503]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[504]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[505]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[506]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[507]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[508]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[509]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[510]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[511]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[512]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[513]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[514]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[515]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[516]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[517]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[518]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[519]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[520]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[521]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[522]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[523]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[524]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[525]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[526]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[527]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[528]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[529]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[530]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[531]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[532]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[533]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[534]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[535]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[536]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[537]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[538]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[539]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[540]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[541]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[542]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[543]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[544]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[545]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[546]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[547]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[548]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[549]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[550]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[551]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[552]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[553]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[554]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[555]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[556]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[557]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[558]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[559]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[560]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[561]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[562]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[563]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[564]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[565]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[566]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[567]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[568]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[569]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[570]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[571]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[572]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[573]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[574]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[575]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[576]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[577]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[578]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[579]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[580]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[581]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[582]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[583]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[584]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[585]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[586]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[587]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[588]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[589]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[590]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[591]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[592]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[593]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[594]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[595]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[596]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[597]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[598]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[599]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[600]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[601]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[602]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[603]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[604]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[605]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[606]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[607]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[608]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[609]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[610]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[611]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[612]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[613]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[614]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[615]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[616]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[617]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[618]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[619]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[620]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[621]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[622]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[623]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[624]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[625]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[626]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[627]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[628]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[629]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[630]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[631]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[632]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[633]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[634]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[635]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[636]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[637]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[638]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[639]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[640]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[641]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[642]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[643]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[644]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[645]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[646]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[647]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[648]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[649]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[650]" " -type \"float3\" 0 0 0"
+		"pt[404:650]" (" -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "
+		+ "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		)
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[684]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[693]" " -type \"float3\" 0 0 0"
+		"pt[693:694]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[694]" " -type \"float3\" 0 0 0"
+		"pt[696:698]" " -type \"float3\" 0 0 0 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[696]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[697]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[698]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[704]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[705]" " -type \"float3\" 0 0 0"
+		"pt[704:705]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[708]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[714]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[723]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[724]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[725]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[726]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[727]" " -type \"float3\" 0 0 0"
+		"pt[723:727]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[734]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[748]" " -type \"float3\" 0 0 0"
+		"pt[748:749]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[749]" " -type \"float3\" 0 0 0"
+		"pt[751:752]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[751]" " -type \"float3\" 0 0 0"
+		"pt[767:768]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[752]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[767]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[768]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[779]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[780]" " -type \"float3\" 0 0 0"
+		"pt[779:780]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[784]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[802]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[803]" " -type \"float3\" 0 0 0"
+		"pt[802:803]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[810]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
@@ -13353,283 +12228,18 @@ createNode reference -n "Takoto_ModelRN";
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[824]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[842]" " -type \"float3\" 0 0 0"
+		"pt[842:847]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[843]" " -type \"float3\" 0 0 0"
+		"pt[849:889]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[844]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[845]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[846]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[847]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[849]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[850]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[851]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[852]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[853]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[854]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[855]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[856]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[857]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[858]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[859]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[860]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[861]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[862]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[863]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[864]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[865]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[866]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[867]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[868]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[869]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[870]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[871]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[872]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[873]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[874]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[875]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[876]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[877]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[878]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[879]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[880]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[881]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[882]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[883]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[884]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[885]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[886]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[887]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[888]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[889]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[891]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[892]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[893]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[894]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[895]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[896]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[897]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[898]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[899]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[900]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[901]" " -type \"float3\" 0 0 0"
+		"pt[891:901]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[907]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[909]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[910]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[911]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[912]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[913]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[914]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[915]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[916]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[917]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[918]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[919]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[920]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[921]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[922]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[923]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[924]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[925]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[926]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[927]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[928]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[929]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[930]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[931]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[932]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[933]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[934]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[935]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[936]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[937]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[938]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[939]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[940]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[941]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[942]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[943]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[944]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[945]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[946]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[947]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[948]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[949]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[950]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[951]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[952]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[953]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[954]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[955]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[956]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[957]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[958]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[959]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[960]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[961]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[962]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[963]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[964]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[965]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[966]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[967]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[968]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[969]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[970]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[971]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[972]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[973]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[974]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[975]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[976]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[977]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[978]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[979]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[980]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[981]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[982]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[983]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[984]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[985]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[986]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[987]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[988]" " -type \"float3\" 0 0 0"
+		"pt[909:988]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[991]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
@@ -13639,147 +12249,27 @@ createNode reference -n "Takoto_ModelRN";
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1008]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1012]" " -type \"float3\" 0 0 0"
+		"pt[1012:1034]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1013]" " -type \"float3\" 0 0 0"
+		"pt[1038:1041]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1014]" " -type \"float3\" 0 0 0"
+		"pt[1043:1046]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1015]" " -type \"float3\" 0 0 0"
+		"pt[1049:1050]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1016]" " -type \"float3\" 0 0 0"
+		"pt[1052:1063]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1017]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1018]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1019]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1020]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1021]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1022]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1023]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1024]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1025]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1026]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1027]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1028]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1029]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1030]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1031]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1032]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1033]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1034]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1038]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1039]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1040]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1041]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1043]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1044]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1045]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1046]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1049]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1050]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1052]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1053]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1054]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1055]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1056]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1057]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1058]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1059]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1060]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1061]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1062]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1063]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1066]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1067]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1068]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1069]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1070]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1071]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1072]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1073]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1074]" " -type \"float3\" 0 0 0"
+		"pt[1066:1074]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1084]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1086]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1102]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1103]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1104]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1105]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1106]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1107]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1108]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1109]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1110]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1111]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1112]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1113]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1114]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1115]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1116]" " -type \"float3\" 0 0 0"
+		"pt[1102:1116]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1123]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
@@ -13791,11 +12281,7 @@ createNode reference -n "Takoto_ModelRN";
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1491]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1493]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1494]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1495]" " -type \"float3\" 0 0 0"
+		"pt[1493:1495]" " -type \"float3\" 0 0 0 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1498]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
@@ -13807,141 +12293,43 @@ createNode reference -n "Takoto_ModelRN";
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1516]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1573]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1574]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1575]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1576]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1577]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1578]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1579]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1580]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1581]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1582]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1583]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1584]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1585]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1586]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1587]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1588]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1589]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1590]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1591]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1592]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1593]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1594]" " -type \"float3\" 0 0 0"
+		"pt[1573:1594]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1715]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1753]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1757]" " -type \"float3\" 0 0 0"
+		"pt[1757:1758]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1758]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1771]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1772]" " -type \"float3\" 0 0 0"
+		"pt[1771:1772]" " -type \"float3\" 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1775]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1777]" " -type \"float3\" 0 0 0"
+		"pt[1777:1781]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1778]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1779]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1780]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1781]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1873]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1874]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1875]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1876]" " -type \"float3\" 0 0 0"
+		"pt[1873:1876]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1883]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
-		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
-		"pnts[1905]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"pnts[1905]" " -type \"float3\" 0 0 0"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"dispResolution" " 1"
 		2 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape" 
 		"displaySmoothMesh" " 0"
-		3 "Takoto_Model:Geo_Layer.drawInfo" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo.drawOverride" 
-		""
-		3 "Takoto_Model:groupId103.message" "Takoto_Model:pants_shaderSG.groupNodes" 
+		2 "Takoto_Model:Geo_Layer" "displayType" " 0"
+		3 "Takoto_Model:groupId100.message" "Takoto_Model:shirt_shaderSG.groupNodes" 
 		"-na"
-		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[7]" 
-		"Takoto_Model:pants_shaderSG.dagSetMembers" "-na"
-		3 "Takoto_Model:groupId106.message" "Takoto_Model:goggles_lens_shaderSG.groupNodes" 
+		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[4]" 
+		"Takoto_Model:shirt_shaderSG.dagSetMembers" "-na"
+		3 "Takoto_Model:groupId104.message" "Takoto_Model:shoes_shaderSG.groupNodes" 
 		"-na"
-		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[10]" 
-		"Takoto_Model:goggles_lens_shaderSG.dagSetMembers" "-na"
+		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[8]" 
+		"Takoto_Model:shoes_shaderSG.dagSetMembers" "-na"
 		3 "Takoto_Model:groupId107.message" "Takoto_Model:hair_shaderSG.groupNodes" 
 		"-na"
 		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[11]" 
 		"Takoto_Model:hair_shaderSG.dagSetMembers" "-na"
-		3 "Takoto_Model:groupId105.message" "Takoto_Model:lambert8SG.groupNodes" 
-		"-na"
-		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[9]" 
-		"Takoto_Model:lambert8SG.dagSetMembers" "-na"
-		3 "Takoto_Model:groupId102.message" "Takoto_Model:lambert6SG.groupNodes" 
-		"-na"
-		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[6]" 
-		"Takoto_Model:lambert6SG.dagSetMembers" "-na"
 		3 "Takoto_Model:skin_shaderSG.memberWireframeColor" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[3].objectGrpColor" 
 		""
 		3 "Takoto_Model:groupId99.groupId" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[3].objectGroupId" 
@@ -13978,10 +12366,6 @@ createNode reference -n "Takoto_ModelRN";
 		""
 		3 "Takoto_Model:groupId107.groupId" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[11].objectGroupId" 
 		""
-		3 "Takoto_Model:groupId100.message" "Takoto_Model:shirt_shaderSG.groupNodes" 
-		"-na"
-		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[4]" 
-		"Takoto_Model:shirt_shaderSG.dagSetMembers" "-na"
 		3 "Takoto_Model:groupId99.message" "Takoto_Model:skin_shaderSG.groupNodes" 
 		"-na"
 		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[3]" 
@@ -13990,10 +12374,24 @@ createNode reference -n "Takoto_ModelRN";
 		"-na"
 		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[5]" 
 		"Takoto_Model:skin_shaderSG.dagSetMembers" "-na"
-		3 "Takoto_Model:groupId104.message" "Takoto_Model:shoes_shaderSG.groupNodes" 
+		3 "Takoto_Model:groupId105.message" "Takoto_Model:lambert8SG.groupNodes" 
 		"-na"
-		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[8]" 
-		"Takoto_Model:shoes_shaderSG.dagSetMembers" "-na"
+		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[9]" 
+		"Takoto_Model:lambert8SG.dagSetMembers" "-na"
+		3 "Takoto_Model:groupId103.message" "Takoto_Model:pants_shaderSG.groupNodes" 
+		"-na"
+		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[7]" 
+		"Takoto_Model:pants_shaderSG.dagSetMembers" "-na"
+		3 "Takoto_Model:groupId106.message" "Takoto_Model:goggles_lens_shaderSG.groupNodes" 
+		"-na"
+		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[10]" 
+		"Takoto_Model:goggles_lens_shaderSG.dagSetMembers" "-na"
+		3 "Takoto_Model:groupId102.message" "Takoto_Model:lambert6SG.groupNodes" 
+		"-na"
+		3 "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[6]" 
+		"Takoto_Model:lambert6SG.dagSetMembers" "-na"
+		3 "Takoto_Model:Geo_Layer.drawInfo" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo.drawOverride" 
+		""
 		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo.drawOverride" 
 		"Takoto_ModelRN.placeHolderList[1]" ""
 		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[3].objectGroupId" 
@@ -14022,15 +12420,15 @@ createNode reference -n "Takoto_ModelRN";
 		"Takoto_ModelRN.placeHolderList[13]" ""
 		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[7].objectGroupId" 
 		"Takoto_ModelRN.placeHolderList[14]" ""
-		5 0 "Takoto_ModelRN" "Takoto_Model:pants_shaderSG.memberWireframeColor" 
+		5 0 "Takoto_ModelRN" "Takoto_Model:shirt_shaderSG.memberWireframeColor" 
 		"|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[7].objectGrpColor" 
-		"Takoto_ModelRN.placeHolderList[15]" "Takoto_ModelRN.placeHolderList[16]" "Takoto_Model:Takoto_GeoShape.iog.og[7].gco"
+		"Takoto_ModelRN.placeHolderList[15]" "Takoto_ModelRN.placeHolderList[16]" "Takoto_Model:Takoto_GeoShape.iog.og[4].gco"
 		
 		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[8].objectGroupId" 
 		"Takoto_ModelRN.placeHolderList[17]" ""
-		5 0 "Takoto_ModelRN" "Takoto_Model:shoes_shaderSG.memberWireframeColor" 
+		5 0 "Takoto_ModelRN" "Takoto_Model:pants_shaderSG.memberWireframeColor" 
 		"|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[8].objectGrpColor" 
-		"Takoto_ModelRN.placeHolderList[18]" "Takoto_ModelRN.placeHolderList[19]" "Takoto_Model:Takoto_GeoShape.iog.og[8].gco"
+		"Takoto_ModelRN.placeHolderList[18]" "Takoto_ModelRN.placeHolderList[19]" "Takoto_Model:Takoto_GeoShape.iog.og[7].gco"
 		
 		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[9].objectGroupId" 
 		"Takoto_ModelRN.placeHolderList[20]" ""
@@ -14056,15 +12454,15 @@ createNode reference -n "Takoto_ModelRN";
 		"Takoto_ModelRN.placeHolderList[30]" ""
 		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[12].objectGrpColor" 
 		"Takoto_ModelRN.placeHolderList[31]" ""
-		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.uvSet[0].uvSetTweakLocation" 
+		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[13].objectGroupId" 
 		"Takoto_ModelRN.placeHolderList[32]" ""
-		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.inMesh" 
-		"Takoto_ModelRN.placeHolderList[33]" ""
-		5 3 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.worldMatrix" 
-		"Takoto_ModelRN.placeHolderList[34]" ""
-		5 3 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.worldMatrix" 
+		5 0 "Takoto_ModelRN" "Takoto_Model:pants_shaderSG.memberWireframeColor" 
+		"|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[13].objectGrpColor" 
+		"Takoto_ModelRN.placeHolderList[33]" "Takoto_ModelRN.placeHolderList[34]" "Takoto_Model:Takoto_GeoShape.iog.og[7].gco"
+		
+		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.uvSet[0].uvSetTweakLocation" 
 		"Takoto_ModelRN.placeHolderList[35]" ""
-		5 3 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.worldMatrix" 
+		5 4 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.inMesh" 
 		"Takoto_ModelRN.placeHolderList[36]" ""
 		5 3 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.worldMatrix" 
 		"Takoto_ModelRN.placeHolderList[37]" ""
@@ -14178,40 +12576,51 @@ createNode reference -n "Takoto_ModelRN";
 		"Takoto_ModelRN.placeHolderList[91]" ""
 		5 3 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.worldMatrix" 
 		"Takoto_ModelRN.placeHolderList[92]" ""
+		5 3 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.worldMatrix" 
+		"Takoto_ModelRN.placeHolderList[93]" ""
+		5 3 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.worldMatrix" 
+		"Takoto_ModelRN.placeHolderList[94]" ""
+		5 3 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.worldMatrix" 
+		"Takoto_ModelRN.placeHolderList[95]" ""
 		5 0 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[7]" 
-		"Takoto_Model:pants_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[93]" 
-		"Takoto_ModelRN.placeHolderList[94]" "Takoto_Model:pants_shaderSG.dsm"
-		5 4 "Takoto_ModelRN" "Takoto_Model:pants_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[95]" 
+		"Takoto_Model:shirt_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[96]" 
+		"Takoto_ModelRN.placeHolderList[97]" "Takoto_Model:pants_shaderSG.dsm"
+		5 4 "Takoto_ModelRN" "Takoto_Model:shirt_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[98]" 
+		""
+		5 0 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[13]" 
+		"Takoto_Model:pants_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[99]" 
+		"Takoto_ModelRN.placeHolderList[100]" ""
+		5 0 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[8]" 
+		"Takoto_Model:pants_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[101]" 
+		"Takoto_ModelRN.placeHolderList[102]" "Takoto_Model:shoes_shaderSG.dsm"
+		5 4 "Takoto_ModelRN" "Takoto_Model:pants_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[103]" 
+		""
+		5 4 "Takoto_ModelRN" "Takoto_Model:pants_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[104]" 
 		""
 		5 0 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[3]" 
-		"Takoto_Model:skin_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[96]" "Takoto_ModelRN.placeHolderList[97]" 
-		"Takoto_Model:skin_shaderSG.dsm"
+		"Takoto_Model:skin_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[105]" 
+		"Takoto_ModelRN.placeHolderList[106]" "Takoto_Model:skin_shaderSG.dsm"
 		5 0 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[5]" 
-		"Takoto_Model:skin_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[98]" "Takoto_ModelRN.placeHolderList[99]" 
-		"Takoto_Model:skin_shaderSG.dsm"
-		5 4 "Takoto_ModelRN" "Takoto_Model:skin_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[100]" 
+		"Takoto_Model:skin_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[107]" 
+		"Takoto_ModelRN.placeHolderList[108]" "Takoto_Model:skin_shaderSG.dsm"
+		5 4 "Takoto_ModelRN" "Takoto_Model:skin_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[109]" 
 		""
-		5 4 "Takoto_ModelRN" "Takoto_Model:skin_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[101]" 
-		""
-		5 0 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[8]" 
-		"Takoto_Model:shoes_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[102]" 
-		"Takoto_ModelRN.placeHolderList[103]" "Takoto_Model:shoes_shaderSG.dsm"
-		5 4 "Takoto_ModelRN" "Takoto_Model:shoes_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[104]" 
+		5 4 "Takoto_ModelRN" "Takoto_Model:skin_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[110]" 
 		""
 		5 0 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[9]" 
-		"Takoto_Model:lambert8SG.dagSetMembers" "Takoto_ModelRN.placeHolderList[105]" "Takoto_ModelRN.placeHolderList[106]" 
+		"Takoto_Model:lambert8SG.dagSetMembers" "Takoto_ModelRN.placeHolderList[111]" "Takoto_ModelRN.placeHolderList[112]" 
 		"Takoto_Model:lambert8SG.dsm"
-		5 4 "Takoto_ModelRN" "Takoto_Model:lambert8SG.groupNodes" "Takoto_ModelRN.placeHolderList[107]" 
+		5 4 "Takoto_ModelRN" "Takoto_Model:lambert8SG.groupNodes" "Takoto_ModelRN.placeHolderList[113]" 
 		""
 		5 0 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[10]" 
-		"Takoto_Model:goggles_lens_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[108]" 
-		"Takoto_ModelRN.placeHolderList[109]" "Takoto_Model:goggles_lens_shaderSG.dsm"
+		"Takoto_Model:goggles_lens_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[114]" 
+		"Takoto_ModelRN.placeHolderList[115]" "Takoto_Model:goggles_lens_shaderSG.dsm"
 		5 4 "Takoto_ModelRN" "Takoto_Model:goggles_lens_shaderSG.groupNodes" 
-		"Takoto_ModelRN.placeHolderList[110]" ""
+		"Takoto_ModelRN.placeHolderList[116]" ""
 		5 0 "Takoto_ModelRN" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo|Takoto_Model:Takoto_GeoShape.instObjGroups.objectGroups[11]" 
-		"Takoto_Model:hair_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[111]" 
-		"Takoto_ModelRN.placeHolderList[112]" "Takoto_Model:hair_shaderSG.dsm"
-		5 4 "Takoto_ModelRN" "Takoto_Model:hair_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[113]" 
+		"Takoto_Model:hair_shaderSG.dagSetMembers" "Takoto_ModelRN.placeHolderList[117]" 
+		"Takoto_ModelRN.placeHolderList[118]" "Takoto_Model:hair_shaderSG.dsm"
+		5 4 "Takoto_ModelRN" "Takoto_Model:hair_shaderSG.groupNodes" "Takoto_ModelRN.placeHolderList[119]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -15494,7 +13903,7 @@ createNode polyTweak -n "Takoto_Model:polyTweak13";
 createNode polyTweakUV -n "polyTweakUV7";
 	rename -uid "D87D1C75-409A-0E54-2266-F089792D7CFF";
 	setAttr ".uopa" yes;
-	setAttr -s 9 ".uvtk";
+	setAttr -s 8 ".uvtk";
 	setAttr ".uvtk[1510]" -type "float2" -1.9112544e-07 -9.3014758e-05 ;
 	setAttr ".uvtk[1514]" -type "float2" 1.4667893e-07 0.00011364224 ;
 	setAttr ".uvtk[1515]" -type "float2" -4.1829381e-07 -9.1223112e-05 ;
@@ -16537,14 +14946,14 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top|topShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 520\n            -height 228\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side|sideShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n"
 		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
-		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 519\n            -height 227\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front|frontShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n"
-		+ "            -width 520\n            -height 227\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp|perspShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n"
+		+ "            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp|perspShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n"
 		+ "            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1046\n            -height 499\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
@@ -16554,10 +14963,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
 		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n"
-		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 1\n                -highlightAffectedCurves 0\n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
-		+ "                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
-		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n"
+		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n"
+		+ "                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n"
+		+ "                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n"
+		+ "                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
 		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
@@ -16751,7 +15160,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge10";
 createNode polyTweakUV -n "polyTweakUV8";
 	rename -uid "9CCBE88E-4803-BAE5-F822-B0A812A4D500";
 	setAttr ".uopa" yes;
-	setAttr -s 8 ".uvtk";
+	setAttr -s 7 ".uvtk";
 	setAttr ".uvtk[2727]" -type "float2" 6.9636261e-09 2.3610999e-08 ;
 	setAttr ".uvtk[2867]" -type "float2" 8.7477179e-07 1.5437381e-07 ;
 	setAttr ".uvtk[2868]" -type "float2" -6.687892e-07 -5.7290373e-07 ;
@@ -16767,9 +15176,8 @@ createNode polyMergeVert -n "polyMergeVert8";
 createNode polyTweak -n "Takoto_Model:polyTweak24";
 	rename -uid "5D1104AB-408A-087E-C1B5-EB83A97A5E49";
 	setAttr ".uopa" yes;
-	setAttr -s 835 ".tk";
-	setAttr ".tk[1874]" -type "float3" 0 10.987761 30.149216 ;
-	setAttr ".tk[1875]" -type "float3" 0.29140854 7.030364 26.704014 ;
+	setAttr -s 2 ".tk[1874:1875]" -type "float3"  0 10.98776054 30.1492157 0.29140854
+		 7.030364037 26.70401382;
 createNode polyExtrudeEdge -n "polyExtrudeEdge11";
 	rename -uid "7B03ED15-4F71-7524-4ABF-F7922A17BD05";
 	setAttr ".uopa" yes;
@@ -16784,12 +15192,11 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge11";
 createNode polyTweak -n "Takoto_Model:polyTweak25";
 	rename -uid "F5F0FF57-4316-1DB8-436F-678450D801AC";
 	setAttr ".uopa" yes;
-	setAttr -s 835 ".tk";
-	setAttr ".tk[1874]" -type "float3" 0 0 -21.723484 ;
+	setAttr ".tk[1874]" -type "float3"  0 0 -21.72348404;
 createNode polyTweakUV -n "polyTweakUV9";
 	rename -uid "2460D500-43A8-384C-CC63-D58534608CC8";
 	setAttr ".uopa" yes;
-	setAttr -s 8 ".uvtk";
+	setAttr -s 7 ".uvtk";
 	setAttr ".uvtk[61]" -type "float2" 6.9636261e-09 2.3610999e-08 ;
 	setAttr ".uvtk[87]" -type "float2" 8.7477179e-07 1.5437381e-07 ;
 	setAttr ".uvtk[111]" -type "float2" -6.687892e-07 -5.7290373e-07 ;
@@ -16805,13 +15212,12 @@ createNode polyMergeVert -n "polyMergeVert9";
 createNode polyTweak -n "Takoto_Model:polyTweak26";
 	rename -uid "99A47589-4ADC-8191-3295-1FA2E4562748";
 	setAttr ".uopa" yes;
-	setAttr -s 836 ".tk";
-	setAttr ".tk[1875]" -type "float3" 0 15.576946 24.53133 ;
-	setAttr ".tk[1876]" -type "float3" -0.29140854 7.0303154 26.704014 ;
+	setAttr -s 2 ".tk[1875:1876]" -type "float3"  0 15.57694626 24.53133011
+		 -0.29140854 7.030315399 26.70401382;
 createNode polyTweakUV -n "polyTweakUV10";
 	rename -uid "3642400B-430C-BE28-AA02-98B658514F9D";
 	setAttr ".uopa" yes;
-	setAttr -s 7 ".uvtk";
+	setAttr -s 6 ".uvtk";
 	setAttr ".uvtk[60]" -type "float2" -6.1497474e-09 -3.1190879e-08 ;
 	setAttr ".uvtk[2726]" -type "float2" -6.1497474e-09 -3.1190879e-08 ;
 	setAttr ".uvtk[5296]" -type "float2" 5.0934045e-08 9.0318173e-07 ;
@@ -16826,8 +15232,7 @@ createNode polyMergeVert -n "polyMergeVert10";
 createNode polyTweak -n "Takoto_Model:polyTweak27";
 	rename -uid "A5ECECFE-4651-523E-4395-6BB5761D40EC";
 	setAttr ".uopa" yes;
-	setAttr -s 836 ".tk";
-	setAttr ".tk[1875]" -type "float3" 0 -4.5892334 -16.105598 ;
+	setAttr ".tk[1875]" -type "float3"  0 -4.5892334 -16.10559845;
 createNode polySplitRing -n "polySplitRing6";
 	rename -uid "07A7623B-4EEF-3439-A36C-FC9FAD1D6E11";
 	setAttr ".uopa" yes;
@@ -16873,7 +15278,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge12";
 createNode polyTweak -n "Takoto_Model:polyTweak28";
 	rename -uid "862F7CAE-4222-415B-4DE5-16B22E1CDEC4";
 	setAttr ".uopa" yes;
-	setAttr -s 842 ".tk";
+	setAttr -s 6 ".tk";
 	setAttr ".tk[1874]" -type "float3" 0 4.4357991 -7.0217562 ;
 	setAttr ".tk[1883]" -type "float3" 0 0 -3.832201 ;
 	setAttr ".tk[1907]" -type "float3" 0.041578535 3.1344035 -6.6969967 ;
@@ -16900,9 +15305,8 @@ createNode polyMergeVert -n "polyMergeVert11";
 createNode polyTweak -n "Takoto_Model:polyTweak29";
 	rename -uid "BAC47FFF-46D2-62BA-043E-078AFFD2D573";
 	setAttr ".uopa" yes;
-	setAttr -s 844 ".tk";
-	setAttr ".tk[1926]" -type "float3" -12.308218 0 14.551722 ;
-	setAttr ".tk[1927]" -type "float3" -15.759947 -6.645813 18.111195 ;
+	setAttr -s 2 ".tk[1926:1927]" -type "float3"  -12.308218 0 14.55172157 -15.75994682
+		 -6.64581299 18.11119461;
 createNode polySplitRing -n "polySplitRing9";
 	rename -uid "0B4795EB-43FB-969F-DE6B-96B6CDE6B36B";
 	setAttr ".uopa" yes;
@@ -16916,13 +15320,13 @@ createNode polySplitRing -n "polySplitRing9";
 createNode polyTweak -n "Takoto_Model:polyTweak30";
 	rename -uid "ADFE7293-42AC-0388-6F7B-E2BAB2DF36A9";
 	setAttr ".uopa" yes;
-	setAttr -s 844 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[1909]" -type "float3" -1.6205385 0 2.0953739 ;
 	setAttr ".tk[1926]" -type "float3" 16.805252 0 3.8158696 ;
 createNode polyTweak -n "polyTweak8";
 	rename -uid "18D7AFB7-4DB2-0AB2-35FC-9893FA23FD74";
 	setAttr ".uopa" yes;
-	setAttr -s 844 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[1909]" -type "float3" 2.4636691 0 -1.0628572 ;
 	setAttr ".tk[1927]" -type "float3" 0 0.18229011 -3.6159613 ;
 createNode deleteComponent -n "deleteComponent66";
@@ -16953,7 +15357,7 @@ createNode polySoftEdge -n "polySoftEdge8";
 createNode polyTweak -n "Takoto_Model:polyTweak31";
 	rename -uid "B578B6C7-4CE6-C751-138C-2C8DFD81DF8C";
 	setAttr ".uopa" yes;
-	setAttr -s 847 ".tk";
+	setAttr -s 5 ".tk";
 	setAttr ".tk[45]" -type "float3" -1.6956015 0 0 ;
 	setAttr ".tk[1041]" -type "float3" -1.5126895 1.087054 0 ;
 	setAttr ".tk[1050]" -type "float3" 0 0.81486714 0 ;
@@ -16983,14 +15387,10 @@ createNode polyBridgeEdge -n "polyBridgeEdge9";
 createNode polyTweak -n "Takoto_Model:polyTweak32";
 	rename -uid "838BCB8F-458D-32B6-4661-9BAD6012A094";
 	setAttr ".uopa" yes;
-	setAttr -s 855 ".tk";
-	setAttr ".tk[1102]" -type "float3" -0.87916672 14.983804 -18.958094 ;
-	setAttr ".tk[1103]" -type "float3" -8.7455006 0.070207581 -11.839703 ;
-	setAttr ".tk[1104]" -type "float3" 8.7455006 -7.3288641 18.958094 ;
-	setAttr ".tk[1105]" -type "float3" 2.6953807 -6.3644319 15.911362 ;
-	setAttr ".tk[1106]" -type "float3" -4.9079947 -5.1650438 9.3366079 ;
-	setAttr ".tk[1107]" -type "float3" -6.8919592 -5.1650438 -0.076016538 ;
-	setAttr ".tk[1108]" -type "float3" -7.8610582 -2.4281015 -6.2266407 ;
+	setAttr -s 7 ".tk[1102:1108]" -type "float3"  -0.87916672 14.98380375 -18.95809364
+		 -8.74550056 0.070207581 -11.83970261 8.74550056 -7.3288641 18.95809364 2.69538069
+		 -6.36443186 15.91136169 -4.90799475 -5.16504383 9.33660793 -6.89195919 -5.16504383
+		 -0.076016538 -7.86105824 -2.42810154 -6.2266407;
 createNode polyBridgeEdge -n "polyBridgeEdge10";
 	rename -uid "9FD0E89A-4F03-ABD4-17D8-70A344CE0971";
 	setAttr ".ics" -type "componentList" 2 "e[2011]" "e[2046]";
@@ -17025,8 +15425,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge14";
 createNode polyTweak -n "Takoto_Model:polyTweak33";
 	rename -uid "9F852F97-4FEF-C21D-BD66-B081CEEA37FA";
 	setAttr ".uopa" yes;
-	setAttr -s 858 ".tk";
-	setAttr ".tk[1038]" -type "float3" 3.8092554 -52.734295 11.008018 ;
+	setAttr ".tk[1038]" -type "float3"  3.80925536 -52.73429489 11.00801754;
 createNode polyMirror -n "polyMirror2";
 	rename -uid "9B0251BF-4AE0-16B0-4122-C48571129BEC";
 	setAttr ".uopa" yes;
@@ -17040,33 +15439,19 @@ createNode polyMirror -n "polyMirror2";
 createNode polyTweak -n "Takoto_Model:polyTweak34";
 	rename -uid "F1A3C7AA-4CED-46E4-AFAF-A4AAE63B0FB5";
 	setAttr ".uopa" yes;
-	setAttr -s 866 ".tk";
-	setAttr ".tk[1109]" -type "float3" 0 -57.282883 0 ;
-	setAttr ".tk[1110]" -type "float3" 0 -57.282883 0 ;
-	setAttr ".tk[1111]" -type "float3" 0 -57.282883 0 ;
-	setAttr ".tk[1112]" -type "float3" 0 -57.282883 0 ;
-	setAttr ".tk[1113]" -type "float3" 0 -57.282883 0 ;
-	setAttr ".tk[1114]" -type "float3" 0 -57.282883 0 ;
-	setAttr ".tk[1115]" -type "float3" 0 -57.282883 0 ;
-	setAttr ".tk[1116]" -type "float3" 0 -57.282883 0 ;
+	setAttr -s 8 ".tk[1109:1116]" -type "float3"  0 -57.28288269 0 0 -57.28288269
+		 0 0 -57.28288269 0 0 -57.28288269 0 0 -57.28288269 0 0 -57.28288269 0 0 -57.28288269
+		 0 0 -57.28288269 0;
 createNode polySoftEdge -n "polySoftEdge9";
 	rename -uid "C04CD3A9-434D-A92E-E963-7FB95F88429E";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 9 "e[1655]" "e[2059]" "e[2110:2112]" "e[2145]" "e[2212]" "e[4230]" "e[4289:4290]" "e[4293]" "e[4310]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".a" 180;
-createNode polyPlane -n "polyPlane1";
-	rename -uid "135043BA-4959-7996-F55F-D6BDB06D88B3";
-	setAttr ".ax" -type "double3" 0 1 0 ;
-	setAttr ".w" 1;
-	setAttr ".h" 1;
-	setAttr ".sw" 2;
-	setAttr ".sh" 2;
-	setAttr ".cuv" 2;
 createNode polyTweak -n "polyTweak9";
 	rename -uid "3904036A-4B00-6842-795C-5A97D6874C6E";
 	setAttr ".uopa" yes;
-	setAttr -s 880 ".tk";
+	setAttr -s 23 ".tk";
 	setAttr ".tk[13]" -type "float3" 0.50117654 0 0 ;
 	setAttr ".tk[1034]" -type "float3" 0 0 9.5367432e-07 ;
 	setAttr ".tk[1049]" -type "float3" 1.2093773 1.0092845 -1.854751 ;
@@ -17360,12 +15745,11 @@ createNode polySphere -n "polySphere1";
 	setAttr ".r" 1;
 createNode displayLayer -n "layer1";
 	rename -uid "A312DC58-4558-D5AB-B3DB-09B5847490EF";
-	setAttr ".dt" 2;
 	setAttr ".do" 1;
 createNode polyTweak -n "polyTweak10";
 	rename -uid "398F82DB-4901-AF7F-940F-2ABA9CD07F9F";
 	setAttr ".uopa" yes;
-	setAttr -s 188 ".tk";
+	setAttr -s 187 ".tk";
 	setAttr ".tk[22]" -type "float3" -0.95318276 0 0 ;
 	setAttr ".tk[23]" -type "float3" -0.95318276 0 0 ;
 	setAttr ".tk[24]" -type "float3" -0.95318276 0 0 ;
@@ -17579,7 +15963,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge15";
 createNode polyTweak -n "polyTweak11";
 	rename -uid "7839712C-4410-76EC-7A67-BDBB3153B6CF";
 	setAttr ".uopa" yes;
-	setAttr -s 172 ".tk";
+	setAttr -s 163 ".tk";
 	setAttr ".tk[82]" -type "float3" 0 0 0.31516016 ;
 	setAttr ".tk[83]" -type "float3" 0 0 1.0372596 ;
 	setAttr ".tk[84]" -type "float3" 0 0 1.0748726 ;
@@ -17746,7 +16130,7 @@ createNode polyTweak -n "polyTweak11";
 createNode polyTweak -n "polyTweak12";
 	rename -uid "B33EC120-46E5-AA12-F36C-D989E69A31F6";
 	setAttr ".uopa" yes;
-	setAttr -s 11 ".tk";
+	setAttr -s 10 ".tk";
 	setAttr ".tk[195]" -type "float3" 0 0 9.5367432e-06 ;
 	setAttr ".tk[196]" -type "float3" 0 0 -5.090168 ;
 	setAttr ".tk[215]" -type "float3" 0 0 26.562826 ;
@@ -17772,7 +16156,7 @@ createNode deleteComponent -n "deleteComponent158";
 createNode polyTweak -n "polyTweak13";
 	rename -uid "78B69EC7-44AB-EE25-389D-7FA7B612A57B";
 	setAttr ".uopa" yes;
-	setAttr -s 7 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[215]" -type "float3" -5.9651709 0 8.0840836 ;
 	setAttr ".tk[235]" -type "float3" -10.692204 -2.7806458 12.181839 ;
 createNode deleteComponent -n "deleteComponent159";
@@ -17804,7 +16188,7 @@ createNode polyBridgeEdge -n "polyBridgeEdge14";
 createNode polyTweak -n "polyTweak14";
 	rename -uid "2BD4D44F-44F0-85C2-FA04-ED8DAFEB34F7";
 	setAttr ".uopa" yes;
-	setAttr -s 300 ".tk";
+	setAttr -s 251 ".tk";
 	setAttr ".tk[0]" -type "float3" -0.85814655 0 -9.9828968 ;
 	setAttr ".tk[1]" -type "float3" -1.0101793 0 -11.751508 ;
 	setAttr ".tk[2]" -type "float3" -1.0502651 -5.9604645e-08 -12.217832 ;
@@ -18065,27 +16449,6 @@ createNode polyBridgeEdge -n "polyBridgeEdge15";
 	setAttr ".sv1" 37;
 	setAttr ".sv2" 194;
 	setAttr ".d" 1;
-createNode polySplitRing -n "polySplitRing11";
-	rename -uid "06E37AAF-447B-DF47-2EF8-8B8F425A8028";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 3 "e[2]" "e[7]" "e[11]";
-	setAttr ".ix" -type "matrix" 0.52904814906200237 0 0 0 0 0 1 0 0 -1 0 0 0 565.17571063798323 19.678285826426407 1;
-	setAttr ".wt" 0.53636729717254639;
-	setAttr ".re" 11;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polySplitRing -n "polySplitRing12";
-	rename -uid "9411995E-4E3D-D976-9E97-338C1C6A23BB";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 3 "e[0]" "e[5]" "e[10]";
-	setAttr ".ix" -type "matrix" 0.52904814906200237 0 0 0 0 0 1 0 0 -1 0 0 0 565.17571063798323 19.678285826426407 1;
-	setAttr ".wt" 0.43088719248771667;
-	setAttr ".dr" no;
-	setAttr ".re" 10;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
 createNode polyCylinder -n "polyCylinder1";
 	rename -uid "82F4FB0A-4EA9-6962-9B94-738B36093B8D";
 	setAttr ".ax" -type "double3" 0 1 0 ;
@@ -18093,57 +16456,28 @@ createNode polyCylinder -n "polyCylinder1";
 	setAttr ".h" 2;
 	setAttr ".sc" 1;
 	setAttr ".cuv" 3;
-createNode polySplitRing -n "polySplitRing13";
-	rename -uid "392E6986-4634-4618-74BC-62B9EC2F9E80";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 2 "e[12:13]" "e[15]";
-	setAttr ".ix" -type "matrix" 0.52904814906200237 0 0 0 0 0 1 0 0 -1 0 0 0 565.17571063798323 19.678285826426407 1;
-	setAttr ".wt" 0.43353837728500366;
-	setAttr ".re" 12;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polyTweak -n "polyTweak15";
-	rename -uid "D84F0F24-4419-B43A-D0EA-D7B1C337ACED";
-	setAttr ".uopa" yes;
-	setAttr -s 15 ".tk[0:14]" -type "float3"  0 15.73356342 -5.49071264
-		 0 25.96858215 -5.3696537 0 15.73356342 -5.49071264 0 3.42010641 -20.14514351 0 12.090881348
-		 -20.14514351 0 3.42010641 -20.14514351 0.2563622 -31.86277008 -12.69302464 0 -3.12290001
-		 -8.1569128 2.75690389 -30.89660454 -10.44280052 0 -12.8210125 -10.53131008 0 8.63787746
-		 -20.14514351 0 21.88614273 -5.42015886 0 -15.62947273 -9.38967228 0 8.26444149 -20.14514351
-		 0 21.44644165 -5.42016268;
-createNode polySplitRing -n "polySplitRing14";
-	rename -uid "0D2B7650-4513-932C-450E-C2B740C4F6DF";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 3 "e[0]" "e[5]" "e[10]";
-	setAttr ".ix" -type "matrix" 0.52904814906200237 0 0 0 0 0 1 0 0 -1 0 0 0 565.17571063798323 19.678285826426407 1;
-	setAttr ".wt" 0.4831162691116333;
-	setAttr ".dr" no;
-	setAttr ".re" 10;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polySplitRing -n "polySplitRing15";
-	rename -uid "1A3478F7-4483-8AE4-B4FF-10A3159E752C";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 2 "e[17:18]" "e[20]";
-	setAttr ".ix" -type "matrix" 0.52904814906200237 0 0 0 0 0 1 0 0 -1 0 0 0 565.17571063798323 19.678285826426407 1;
-	setAttr ".wt" 0.50220948457717896;
-	setAttr ".dr" no;
-	setAttr ".re" 17;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polySplitRing -n "polySplitRing16";
-	rename -uid "E3402ADA-4FB8-4E7F-CB0E-24837A18A32F";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 3 "e[2]" "e[7]" "e[11]";
-	setAttr ".ix" -type "matrix" 0.52904814906200237 0 0 0 0 0 1 0 0 -1 0 0 0 565.17571063798323 19.678285826426407 1;
-	setAttr ".wt" 0.5329902172088623;
-	setAttr ".re" 11;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
+createNode polyCylinder -n "polyCylinder2";
+	rename -uid "80D56A09-4361-0F99-F5D0-07BD512C2F30";
+	setAttr ".ax" -type "double3" 0 1 0 ;
+	setAttr ".r" 1;
+	setAttr ".h" 2;
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode deleteComponent -n "deleteComponent161";
+	rename -uid "20544214-483F-C487-6F96-BBB565105782";
+	setAttr ".dc" -type "componentList" 1 "f[20:39]";
+createNode groupParts -n "groupParts13";
+	rename -uid "D6C74FE6-4315-DD7A-BDE6-368CD1C5C301";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[1074:1169]";
+	setAttr ".irc" -type "componentList" 1 "f[150:245]";
+createNode groupId -n "groupId11";
+	rename -uid "7ECD3A63-45A7-A8DB-A03E-5EA5B6B8B5D3";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts14";
+	rename -uid "1823769E-4AB1-6162-584D-86BF8B154F9C";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[150:245]";
 select -ne :time1;
 	setAttr ".o" 86;
 	setAttr ".unw" 86;
@@ -18212,84 +16546,88 @@ connectAttr "Takoto_ModelRN.phl[27]" "Takoto_ModelRN.phl[28]";
 connectAttr "Takoto_ModelRN.phl[29]" "lambert3SG.dsm" -na;
 connectAttr "groupId10.id" "Takoto_ModelRN.phl[30]";
 connectAttr "lambert3SG.mwc" "Takoto_ModelRN.phl[31]";
-connectAttr "polyTweakUV11.uvtk[0]" "Takoto_ModelRN.phl[32]";
-connectAttr "deleteComponent150.og" "Takoto_ModelRN.phl[33]";
-connectAttr "Takoto_ModelRN.phl[34]" "polyExtrudeEdge1.mp";
-connectAttr "Takoto_ModelRN.phl[35]" "polyExtrudeEdge2.mp";
-connectAttr "Takoto_ModelRN.phl[36]" "polyExtrudeEdge3.mp";
-connectAttr "Takoto_ModelRN.phl[37]" "polySoftEdge1.mp";
-connectAttr "Takoto_ModelRN.phl[38]" "polySoftEdge2.mp";
-connectAttr "Takoto_ModelRN.phl[39]" "polyExtrudeEdge4.mp";
-connectAttr "Takoto_ModelRN.phl[40]" "polySplitRing1.mp";
-connectAttr "Takoto_ModelRN.phl[41]" "polySoftEdge3.mp";
-connectAttr "Takoto_ModelRN.phl[42]" "polySplitRing2.mp";
-connectAttr "Takoto_ModelRN.phl[43]" "polyMergeVert1.mp";
-connectAttr "Takoto_ModelRN.phl[44]" "polyMergeVert2.mp";
-connectAttr "Takoto_ModelRN.phl[45]" "polyMergeVert3.mp";
-connectAttr "Takoto_ModelRN.phl[46]" "polyMergeVert4.mp";
-connectAttr "Takoto_ModelRN.phl[47]" "polyMergeVert5.mp";
-connectAttr "Takoto_ModelRN.phl[48]" "polyMergeVert6.mp";
-connectAttr "Takoto_ModelRN.phl[49]" "polyMergeVert7.mp";
-connectAttr "Takoto_ModelRN.phl[50]" "polySoftEdge4.mp";
-connectAttr "Takoto_ModelRN.phl[51]" "polyBridgeEdge1.mp";
-connectAttr "Takoto_ModelRN.phl[52]" "polyBridgeEdge2.mp";
-connectAttr "Takoto_ModelRN.phl[53]" "polyBridgeEdge3.mp";
-connectAttr "Takoto_ModelRN.phl[54]" "polyBridgeEdge4.mp";
-connectAttr "Takoto_ModelRN.phl[55]" "polyBridgeEdge5.mp";
-connectAttr "Takoto_ModelRN.phl[56]" "polyBridgeEdge6.mp";
-connectAttr "Takoto_ModelRN.phl[57]" "polyBridgeEdge7.mp";
-connectAttr "Takoto_ModelRN.phl[58]" "polyBridgeEdge8.mp";
-connectAttr "Takoto_ModelRN.phl[59]" "polyExtrudeEdge5.mp";
-connectAttr "Takoto_ModelRN.phl[60]" "polyMirror1.mp";
-connectAttr "Takoto_ModelRN.phl[61]" "polySplitRing3.mp";
-connectAttr "Takoto_ModelRN.phl[62]" "polySplitRing4.mp";
-connectAttr "Takoto_ModelRN.phl[63]" "polySplitRing5.mp";
-connectAttr "Takoto_ModelRN.phl[64]" "polySoftEdge5.mp";
-connectAttr "Takoto_ModelRN.phl[65]" "polySoftEdge6.mp";
-connectAttr "Takoto_ModelRN.phl[66]" "polyExtrudeEdge6.mp";
-connectAttr "Takoto_ModelRN.phl[67]" "polyExtrudeEdge7.mp";
-connectAttr "Takoto_ModelRN.phl[68]" "polyExtrudeEdge8.mp";
-connectAttr "Takoto_ModelRN.phl[69]" "polyExtrudeEdge9.mp";
-connectAttr "Takoto_ModelRN.phl[70]" "polySoftEdge7.mp";
-connectAttr "Takoto_ModelRN.phl[71]" "polyExtrudeEdge10.mp";
-connectAttr "Takoto_ModelRN.phl[72]" "polyMergeVert8.mp";
-connectAttr "Takoto_ModelRN.phl[73]" "polyExtrudeEdge11.mp";
-connectAttr "Takoto_ModelRN.phl[74]" "polyMergeVert9.mp";
-connectAttr "Takoto_ModelRN.phl[75]" "polyMergeVert10.mp";
-connectAttr "Takoto_ModelRN.phl[76]" "polySplitRing6.mp";
-connectAttr "Takoto_ModelRN.phl[77]" "polySplitRing7.mp";
-connectAttr "Takoto_ModelRN.phl[78]" "polySplitRing8.mp";
-connectAttr "Takoto_ModelRN.phl[79]" "polyExtrudeEdge12.mp";
-connectAttr "Takoto_ModelRN.phl[80]" "polyMergeVert11.mp";
-connectAttr "Takoto_ModelRN.phl[81]" "polySplitRing9.mp";
-connectAttr "Takoto_ModelRN.phl[82]" "polySplitRing10.mp";
-connectAttr "Takoto_ModelRN.phl[83]" "polySoftEdge8.mp";
-connectAttr "Takoto_ModelRN.phl[84]" "polyExtrudeEdge13.mp";
-connectAttr "Takoto_ModelRN.phl[85]" "polyBridgeEdge9.mp";
-connectAttr "Takoto_ModelRN.phl[86]" "polyBridgeEdge10.mp";
-connectAttr "Takoto_ModelRN.phl[87]" "polyBridgeEdge11.mp";
-connectAttr "Takoto_ModelRN.phl[88]" "polyExtrudeEdge14.mp";
-connectAttr "Takoto_ModelRN.phl[89]" "polyMirror2.mp";
-connectAttr "Takoto_ModelRN.phl[90]" "polySoftEdge9.mp";
-connectAttr "Takoto_ModelRN.phl[91]" "polyBridgeEdge12.mp";
-connectAttr "Takoto_ModelRN.phl[92]" "polyBridgeEdge13.mp";
-connectAttr "Takoto_ModelRN.phl[93]" "Takoto_ModelRN.phl[94]";
-connectAttr "groupId5.msg" "Takoto_ModelRN.phl[95]";
+connectAttr "groupId11.id" "Takoto_ModelRN.phl[32]";
+connectAttr "Takoto_ModelRN.phl[33]" "Takoto_ModelRN.phl[34]";
+connectAttr "polyTweakUV11.uvtk[0]" "Takoto_ModelRN.phl[35]";
+connectAttr "groupParts14.og" "Takoto_ModelRN.phl[36]";
+connectAttr "Takoto_ModelRN.phl[37]" "polyExtrudeEdge2.mp";
+connectAttr "Takoto_ModelRN.phl[38]" "polyExtrudeEdge1.mp";
+connectAttr "Takoto_ModelRN.phl[39]" "polyExtrudeEdge3.mp";
+connectAttr "Takoto_ModelRN.phl[40]" "polySoftEdge1.mp";
+connectAttr "Takoto_ModelRN.phl[41]" "polySoftEdge2.mp";
+connectAttr "Takoto_ModelRN.phl[42]" "polyExtrudeEdge4.mp";
+connectAttr "Takoto_ModelRN.phl[43]" "polySplitRing1.mp";
+connectAttr "Takoto_ModelRN.phl[44]" "polySoftEdge3.mp";
+connectAttr "Takoto_ModelRN.phl[45]" "polySplitRing2.mp";
+connectAttr "Takoto_ModelRN.phl[46]" "polyMergeVert1.mp";
+connectAttr "Takoto_ModelRN.phl[47]" "polyMergeVert2.mp";
+connectAttr "Takoto_ModelRN.phl[48]" "polyMergeVert3.mp";
+connectAttr "Takoto_ModelRN.phl[49]" "polyMergeVert4.mp";
+connectAttr "Takoto_ModelRN.phl[50]" "polyMergeVert5.mp";
+connectAttr "Takoto_ModelRN.phl[51]" "polyMergeVert6.mp";
+connectAttr "Takoto_ModelRN.phl[52]" "polyMergeVert7.mp";
+connectAttr "Takoto_ModelRN.phl[53]" "polySoftEdge4.mp";
+connectAttr "Takoto_ModelRN.phl[54]" "polyBridgeEdge1.mp";
+connectAttr "Takoto_ModelRN.phl[55]" "polyBridgeEdge2.mp";
+connectAttr "Takoto_ModelRN.phl[56]" "polyBridgeEdge3.mp";
+connectAttr "Takoto_ModelRN.phl[57]" "polyBridgeEdge4.mp";
+connectAttr "Takoto_ModelRN.phl[58]" "polyBridgeEdge5.mp";
+connectAttr "Takoto_ModelRN.phl[59]" "polyBridgeEdge6.mp";
+connectAttr "Takoto_ModelRN.phl[60]" "polyBridgeEdge7.mp";
+connectAttr "Takoto_ModelRN.phl[61]" "polyBridgeEdge8.mp";
+connectAttr "Takoto_ModelRN.phl[62]" "polyExtrudeEdge5.mp";
+connectAttr "Takoto_ModelRN.phl[63]" "polyMirror1.mp";
+connectAttr "Takoto_ModelRN.phl[64]" "polySplitRing3.mp";
+connectAttr "Takoto_ModelRN.phl[65]" "polySplitRing4.mp";
+connectAttr "Takoto_ModelRN.phl[66]" "polySplitRing5.mp";
+connectAttr "Takoto_ModelRN.phl[67]" "polySoftEdge5.mp";
+connectAttr "Takoto_ModelRN.phl[68]" "polySoftEdge6.mp";
+connectAttr "Takoto_ModelRN.phl[69]" "polyExtrudeEdge6.mp";
+connectAttr "Takoto_ModelRN.phl[70]" "polyExtrudeEdge7.mp";
+connectAttr "Takoto_ModelRN.phl[71]" "polyExtrudeEdge8.mp";
+connectAttr "Takoto_ModelRN.phl[72]" "polyExtrudeEdge9.mp";
+connectAttr "Takoto_ModelRN.phl[73]" "polySoftEdge7.mp";
+connectAttr "Takoto_ModelRN.phl[74]" "polyExtrudeEdge10.mp";
+connectAttr "Takoto_ModelRN.phl[75]" "polyMergeVert8.mp";
+connectAttr "Takoto_ModelRN.phl[76]" "polyExtrudeEdge11.mp";
+connectAttr "Takoto_ModelRN.phl[77]" "polyMergeVert9.mp";
+connectAttr "Takoto_ModelRN.phl[78]" "polyMergeVert10.mp";
+connectAttr "Takoto_ModelRN.phl[79]" "polySplitRing6.mp";
+connectAttr "Takoto_ModelRN.phl[80]" "polySplitRing7.mp";
+connectAttr "Takoto_ModelRN.phl[81]" "polySplitRing8.mp";
+connectAttr "Takoto_ModelRN.phl[82]" "polyExtrudeEdge12.mp";
+connectAttr "Takoto_ModelRN.phl[83]" "polyMergeVert11.mp";
+connectAttr "Takoto_ModelRN.phl[84]" "polySplitRing9.mp";
+connectAttr "Takoto_ModelRN.phl[85]" "polySplitRing10.mp";
+connectAttr "Takoto_ModelRN.phl[86]" "polySoftEdge8.mp";
+connectAttr "Takoto_ModelRN.phl[87]" "polyExtrudeEdge13.mp";
+connectAttr "Takoto_ModelRN.phl[88]" "polyBridgeEdge9.mp";
+connectAttr "Takoto_ModelRN.phl[89]" "polyBridgeEdge10.mp";
+connectAttr "Takoto_ModelRN.phl[90]" "polyBridgeEdge11.mp";
+connectAttr "Takoto_ModelRN.phl[91]" "polyExtrudeEdge14.mp";
+connectAttr "Takoto_ModelRN.phl[92]" "polyMirror2.mp";
+connectAttr "Takoto_ModelRN.phl[93]" "polySoftEdge9.mp";
+connectAttr "Takoto_ModelRN.phl[94]" "polyBridgeEdge12.mp";
+connectAttr "Takoto_ModelRN.phl[95]" "polyBridgeEdge13.mp";
 connectAttr "Takoto_ModelRN.phl[96]" "Takoto_ModelRN.phl[97]";
-connectAttr "Takoto_ModelRN.phl[98]" "Takoto_ModelRN.phl[99]";
-connectAttr "groupId1.msg" "Takoto_ModelRN.phl[100]";
-connectAttr "groupId3.msg" "Takoto_ModelRN.phl[101]";
-connectAttr "Takoto_ModelRN.phl[102]" "Takoto_ModelRN.phl[103]";
+connectAttr "groupId5.msg" "Takoto_ModelRN.phl[98]";
+connectAttr "Takoto_ModelRN.phl[99]" "Takoto_ModelRN.phl[100]";
+connectAttr "Takoto_ModelRN.phl[101]" "Takoto_ModelRN.phl[102]";
+connectAttr "groupId11.msg" "Takoto_ModelRN.phl[103]";
 connectAttr "groupId6.msg" "Takoto_ModelRN.phl[104]";
 connectAttr "Takoto_ModelRN.phl[105]" "Takoto_ModelRN.phl[106]";
-connectAttr "groupId7.msg" "Takoto_ModelRN.phl[107]";
-connectAttr "Takoto_ModelRN.phl[108]" "Takoto_ModelRN.phl[109]";
-connectAttr "groupId8.msg" "Takoto_ModelRN.phl[110]";
+connectAttr "Takoto_ModelRN.phl[107]" "Takoto_ModelRN.phl[108]";
+connectAttr "groupId1.msg" "Takoto_ModelRN.phl[109]";
+connectAttr "groupId3.msg" "Takoto_ModelRN.phl[110]";
 connectAttr "Takoto_ModelRN.phl[111]" "Takoto_ModelRN.phl[112]";
-connectAttr "groupId9.msg" "Takoto_ModelRN.phl[113]";
-connectAttr "polySplitRing16.out" "pPlaneShape1.i";
+connectAttr "groupId7.msg" "Takoto_ModelRN.phl[113]";
+connectAttr "Takoto_ModelRN.phl[114]" "Takoto_ModelRN.phl[115]";
+connectAttr "groupId8.msg" "Takoto_ModelRN.phl[116]";
+connectAttr "Takoto_ModelRN.phl[117]" "Takoto_ModelRN.phl[118]";
+connectAttr "groupId9.msg" "Takoto_ModelRN.phl[119]";
 connectAttr "polyBridgeEdge15.out" "pSphereShape1.i";
 connectAttr "polyCylinder1.out" "pCylinderShape1.i";
+connectAttr "deleteComponent161.og" "pCylinderShape3.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -18624,26 +16962,18 @@ connectAttr "pSphereShape1.wm" "polyBridgeEdge14.mp";
 connectAttr "polyMirror3.out" "polyTweak14.ip";
 connectAttr "polyBridgeEdge14.out" "polyBridgeEdge15.ip";
 connectAttr "pSphereShape1.wm" "polyBridgeEdge15.mp";
-connectAttr "polyPlane1.out" "polySplitRing11.ip";
-connectAttr "pPlaneShape1.wm" "polySplitRing11.mp";
-connectAttr "polySplitRing11.out" "polySplitRing12.ip";
-connectAttr "pPlaneShape1.wm" "polySplitRing12.mp";
-connectAttr "polyTweak15.out" "polySplitRing13.ip";
-connectAttr "pPlaneShape1.wm" "polySplitRing13.mp";
-connectAttr "polySplitRing12.out" "polyTweak15.ip";
-connectAttr "polySplitRing13.out" "polySplitRing14.ip";
-connectAttr "pPlaneShape1.wm" "polySplitRing14.mp";
-connectAttr "polySplitRing14.out" "polySplitRing15.ip";
-connectAttr "pPlaneShape1.wm" "polySplitRing15.mp";
-connectAttr "polySplitRing15.out" "polySplitRing16.ip";
-connectAttr "pPlaneShape1.wm" "polySplitRing16.mp";
+connectAttr "polyCylinder2.out" "deleteComponent161.ig";
+connectAttr "deleteComponent150.og" "groupParts13.ig";
+connectAttr "groupId6.id" "groupParts13.gi";
+connectAttr "groupParts13.og" "groupParts14.ig";
+connectAttr "groupId11.id" "groupParts14.gi";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape3.iog" ":initialShadingGroup.dsm" -na;
 // End of Mad Scientist Model.ma
