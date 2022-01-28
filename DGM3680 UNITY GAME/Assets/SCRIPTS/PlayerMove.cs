@@ -7,7 +7,6 @@ public class PlayerMove : MonoBehaviour
 
    float speed = 5f;
    float rayLength = 1f;
-   public int jump;
    bool isGrounded;
    bool canMove;
 
@@ -19,17 +18,9 @@ public class PlayerMove : MonoBehaviour
     
    }
 
-   void OnCollisionStay()
-   {
-       isGrounded = true;
-   }
-
    void Update()
    {
-       if(isGrounded)
-       {
-           Move();
-       }    
+        Move();
     }
 
    public void Move()
@@ -78,33 +69,6 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && currentDirection == up)
-        {
-            nextPos = Vector3.forward * jump;
-            currentDirection = up;
-            canMove = true;
-        }
-
-          if(Input.GetKeyDown(KeyCode.Space) && currentDirection == down)
-        {
-            nextPos = Vector3.back * jump;
-            currentDirection = down;
-            canMove = true;
-        }
-
-          if(Input.GetKeyDown(KeyCode.Space) && currentDirection == right)
-        {
-            nextPos = Vector3.right * jump;
-            currentDirection = right;
-            canMove = true;
-        }
-
-          if(Input.GetKeyDown(KeyCode.Space) && currentDirection == left)
-        {
-            nextPos = Vector3.left * jump;
-            currentDirection = left;
-            canMove = true;
-        }
     }
 
    bool Valid()
